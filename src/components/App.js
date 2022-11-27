@@ -7,7 +7,7 @@ import React from 'react'
 
 
 let palavraFake = ''
-let palavra;
+let palavra =[];
 let resetar = false;
 export default function App() {
   // FUNÇÕES PARA RECARREGAR PAGINA
@@ -49,7 +49,7 @@ export default function App() {
     setChute(e.target.value)
   }
   function adivinhar(){
-    if(palavra.join('')==chute.toLowerCase()){
+    if(palavra.join('')===chute.toLowerCase()){
       setClasse('verde')
       setPalavraVisual(palavra)
       setComecou(true)
@@ -84,7 +84,7 @@ export default function App() {
   function clicar(letra) {
     let indexes = [];
     for (let i = 0; i < palavra.length; i++) {
-      if (letra == palavra[i]) {
+      if (letra === palavra[i]) {
         indexes.push(i)
       }
     }
