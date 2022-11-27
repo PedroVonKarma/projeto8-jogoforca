@@ -15,7 +15,7 @@ function Letra(props){
         setDisabled(true)
     }
     return (
-        <button disabled={props.comecou || disabled} onClick={() => {props.fun(); desabilitar();}} className={(props.comecou || disabled) ? 'selecionado' : 'nselecionado'}>{props.letra}</button>
+        <button data-test="letter" disabled={props.comecou || disabled} onClick={() => {props.fun(); desabilitar();}} className={(props.comecou || disabled) ? 'selecionado' : 'nselecionado'}>{props.letra}</button>
     )
 }
 

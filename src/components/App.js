@@ -88,7 +88,6 @@ export default function App() {
         indexes.push(i)
       }
     }
-    console.log('palavra: ' + palavra.join(''))
     if (indexes.length !== 0) {
       let arrTemp = Array.from(palavraFake)
       for (let i = 0; i < indexes.length; i++) {
@@ -105,7 +104,7 @@ export default function App() {
   }
   return (
     <>
-      <Jogo classe={classe} erros={erros} comecou={!comecou} palavra={palavraVisual} funComecar={comecar} />
+      <Jogo data={palavra.join('')} classe={classe} erros={erros} comecou={!comecou} palavra={palavraVisual} funComecar={comecar} />
       <Letras funClicar={clicar} comecou={comecou} />
       <Chute adivinhar={adivinhar} chute={chute} mudarInput={mudarInput} comecou={comecou} />
     </>
