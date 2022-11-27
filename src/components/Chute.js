@@ -1,9 +1,9 @@
-export default function Chute(){
+export default function Chute(props){
     return (
         <div className="chute">
             <p>Já sei a palavra!</p>
-            <input/>
-            <button>Chutar</button>
+            <input disabled={props.comecou}/>
+            <button disabled={props.comecou}>Chutar</button>
             </div>
     );
 }
